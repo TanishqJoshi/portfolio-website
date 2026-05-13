@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { backendSkills, aiSkills, mathSkills, tools } from "@/data/skills";
 import { Server, BrainCircuit, Sigma, Compass, ChartBar, TrendingUp, Trophy, Terminal } from "lucide-react";
+import { NetworkGraph } from "@/components/3d/NetworkGraph";
 
 export function SkillsSection() {
   const getLevelColor = (level: string) => {
@@ -29,6 +30,16 @@ export function SkillsSection() {
         <p className="text-muted-foreground text-lg max-w-2xl text-balance">
           Architectural depth spanning distributed systems, AI orchestration, and mathematical foundations.
         </p>
+      </motion.div>
+
+      {/* 3D Interactive Network Graph */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        <NetworkGraph />
       </motion.div>
 
       {/* Bento Grid */}
