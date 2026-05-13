@@ -1,0 +1,230 @@
+%-------------------------
+% FAANG-Ready Resume — Tanishq Joshi
+% Rebuilt for SDE-1 / early SDE-2 targeting
+% Template base: sb2nov/resume (MIT License)
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins -- tightly tuned for one page
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.30in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.40in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1\vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\newcommand{\resumeCompanyOnly}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+%===========================================
+%   RESUME BEGINS
+%===========================================
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+  {\LARGE \textbf{Tanishq Joshi}} \\[5pt]
+  \small
+  \href{https://mail.google.com/mail/?view=cm&fs=1&to=tanishqjoshi2408@gmail.com}{\faEnvelope\ tanishqjoshi2408@gmail.com}
+  \textbar\
+  \faPhone*\ +91-8770797331
+  \textbar\
+  % \faMapMarker*\ Bengaluru, India \\[3pt]
+  \href{https://linkedin.com/in/tanishqjoshi}{\faLinkedin\ linkedin.com/in/tanishqjoshi}
+  \textbar\
+  \href{https://github.com/TanishqJoshi}{\faGithub\ github.com/TanishqJoshi}
+\end{center}
+\vspace{-10pt}
+
+%-----------SUMMARY-----------
+\section{\color{Blue}\textbf{Summary}}
+% \small{
+% Software Engineer specializing in high-scale \textbf{AI orchestration} and \textbf{distributed systems} with Go, Python, and PostgreSQL. Architected \textbf{RAG pipelines} and multi-tenant migrations delivering \textbf{3x latency gains} and \textbf{\$2M+ enterprise value}. Experience in building event-driven microservices and observability suites to drive measurable operational efficiency at scale.
+% }
+\small{
+\textbf{Software Engineer} with \textbf{2 years} of experience building high-scale \textbf{web applications} and \textbf{AI orchestration} systems using \textbf{Golang} (Gin) and \textbf{Python} (FastAPI). Expert in optimizing backend performance and managing databases, delivering 3x latency improvements and \textbf{\$2M+ in enterprise value}. Proven track record in architecting \textbf{RAG pipelines} and event-driven \textbf{microservices} on RabbitMQ to drive operational efficiency and scalability in production environments.
+}
+\vspace{-4pt}
+
+
+%-----------EDUCATION-----------
+\section{\color{Blue}\textbf{Education}}
+  \resumeSubHeadingListStart
+    \item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Birla Institute of Technology and Science (BITS), Pilani} & \textbf{CGPA: 8.33\,/\,10} \\
+        \textit{\small M.Sc.\ (Hons.) Mathematics\ \textbar\ B.E.\ (Hons.) Electronics \& Communication Engineering} &
+        \textit{\small November 2020 -- July 2025}\\
+      \end{tabular*}\vspace{-4pt}
+  \resumeSubHeadingListEnd
+\vspace{-4pt}
+
+%===========================================
+% EXPERIENCE
+%===========================================
+
+\section{\color{Blue}\textbf{Experience}}
+\resumeSubHeadingListStart
+
+%-------------------------------------------
+% TELUS DIGITAL
+%-------------------------------------------
+\resumeCompanyOnly{Telus Digital}{Bengaluru, India}
+
+
+%----------- ROLE 1 -----------
+\resumeProjectHeading
+{\textbf{Software Development Engineer I}}{July 2025 -- Present}
+
+\resumeItemListStart
+        \resumeItem{Architected a FastAPI orchestration layer for a \textbf{RAG-powered AI assistant}, integrating a temporal knowledge graph (Amazon Neptune) with hybrid BM25 + vector search over an event-driven \textbf{RabbitMQ} pipeline, boosting rater accuracy by \textbf{20\%} across \textbf{50+ enterprise workflows} and cutting query latency by \textbf{30\%}.}
+        \resumeItem{Overhauled the \textbf{multi-tenant PostgreSQL} data model, migrating from MongoDB to normalized relational schemas with composite indexing and query plan optimization; slashed client onboarding time by \textbf{85\%} and achieved a \textbf{3x reduction in p95 latency}.}
+        \resumeItem{Implemented an event-driven bulk processing pipeline on RabbitMQ with adaptive batching and fault-tolerant retry logic, eliminating N+1 bottlenecks to deliver \textbf{2x throughput} across \textbf{10K+ daily workflows} and cut API calls by \textbf{40\%}.}
+        \resumeItem{Shipped a configurable model interaction workflow on FTS with per-workflow endpoint schema config, unlocking \textbf{\$2M} in pilot contracts across \textbf{4 enterprise clients} and enabling annotator-driven, multi-turn \textbf{RLHF} correction loops for enterprise fine-tuning.}
+      \resumeItemListEnd
+
+\vspace{2pt}
+
+%----------- ROLE 2 -----------
+\resumeProjectHeading
+{\textbf{Software Development Engineer Intern}}{December 2024 -- June 2025}
+
+\resumeItemListStart
+        \resumeItem{Saved \textbf{\$50K+} annually in LLM inference and annotation costs by diagnosing unbounded retry storms in the job orchestration layer and deploying a \textbf{Go/PostgreSQL} state-transition guard that enforced per-workflow retry limits, terminating infinite rework loops.}
+        \resumeItem{Built a quality analytics dashboard in Retool backed by BigQuery materialized views for a \textbf{\$5M pilot}, surfacing per-user accept/reject rates, quality scores, and throughput for \textbf{2K+ annotators}, reducing ops reporting overhead by \textbf{85\%}.}
+        \resumeItem{Restored on-call signal quality by engineering an API middleware exclusion layer to filter expected errors pre-ingestion into Sentry, reducing alert noise by \textbf{55\%} and incident \textbf{MTTR by 30\%} across \textbf{100K+ daily requests}.}
+      \resumeItemListEnd
+
+\vspace{2pt}
+
+%----------- ROLE 3 -----------
+\resumeProjectHeading
+{\textbf{Machine Learning Engineering Intern}}{July 2024 -- December 2024}
+
+\resumeItemListStart
+        \resumeItem{Designed a scalable LLM-driven Resume Parser, Expert Profiler, and Task Profiler pipeline processing \textbf{1M+ resumes} with \textbf{82\% structured accuracy}, improving performance by \textbf{28\%} over a rule-based baseline.}
+        \resumeItem{Engineered an experience calculation algorithm for resume parsing and optimized the backend pipeline, reducing costs by \textbf{35\%}.}
+        \resumeItem{Operationalized an automated LLM-based PRP evaluation system, eliminating \textbf{90\%} of manual review hours and reducing evaluation spend by \textbf{35\%} across the annotation quality pipeline.}
+        \resumeItem{Delivered a data ingestion pipeline on MongoDB and AWS S3 processing resume artifacts at scale, improving data retrieval latency by \textbf{45\%}; ran analytical queries on a \textbf{3.6M-user, 120-table BigQuery} schema to surface active cohorts for model targeting.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%-----------PROJECTS-----------
+\section{\color{Blue}\textbf{Projects}}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{\href{https://www.sciencedirect.com/science/article/pii/S1877050925010026}{Larynx Function Prediction}} $|$ \emph{Python, MATLAB} $|$ \textit{\textbf{Published -- Procedia Computer Science, Vol.\ 260, 2025}}}{}
+    \resumeItemListStart
+      \resumeItem{\textbf{Published at RTIP2R-2024} (2000+ submissions); built an ML pipeline classifying larynx function from surface EMG signals using Tunable-Q Wavelet Transform feature extraction and W-KNN with 5-fold cross-validation.}
+      \resumeItem{Surpassed \textbf{4 of 8 SOTA benchmarks} on classification task, validating the wavelet-based feature bank over conventional methods.}
+    \resumeItemListEnd
+    \vspace{4pt}
+
+    \resumeProjectHeading
+      {\textbf{\href{https://github.com/TanishqJoshi/LLM-powered-QnA-System-with-SQL-Integration}{LLM-Powered Q\&A System with SQL Integration}} $|$ \emph{Python, MySQL, LangChain, ChromaDB, Streamlit}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a Retrieval-Augmented Generation (RAG) system using LangChain and ChromaDB to translate natural language questions into executable SQL queries against a live MySQL database.}
+      \resumeItem{Applied few-shot prompting and semantic embedding retrieval, achieving \textbf{92\% NL-to-SQL} accuracy on a 500-query evaluation set; deployed as a Streamlit app with sub-second query response time.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-4pt}
+
+%-----------TECHNICAL SKILLS-----------
+
+\section{\color{Blue}\textbf{Technical Skills}}
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt, parsep=0pt]
+    \item \textbf{Languages \& Frameworks}{: Golang, Python, JavaScript, TypeScript, C++, SQL, FastAPI, Gin, LangChain, gRPC, Streamlit.}
+    \item \textbf{Cloud \& Infrastructure}{: AWS (S3, Amazon Neptune, CloudWatch), GCP (BigQuery), Docker, Kubernetes, CI/CD, RabbitMQ.}
+    \item \textbf{Databases \& Storage}{: PostgreSQL, MongoDB, MySQL, ChromaDB, Redis.}
+    \item \textbf{AI/ML}{: LLMs, RAG, Vector Databases, BM25, Semantic Search, Prompt Engineering, Few-Shot Prompting, RLHF, NLP.}
+    \item \textbf{Systems \& Architecture}{: Microservices, REST APIs, Modular Monolith, Observability (Sentry, Grafana, PGAnalyze, New Relic).}
+  \end{itemize}
+\vspace{-4pt}
+
+%-----------LEADERSHIP (condensed)----------
+\section{\color{Blue}\textbf{Leadership}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Student Representative, Fest Review Committee -- BITS Pilani}}{October 2023 -- October 2024}
+    \resumeItemListStart
+      % \resumeItem{Selected as \textbf{1 of 4 from 900+} applicants by the Campus Director; oversaw an \textbf{INR 3 Crore} festival budget and designed proprietary embezzlement prevention software saving up to \textbf{INR 30 Lakhs} in student funds.}
+      \resumeItem{Selected 1/4 from 900+ by Campus Director to oversee \textbf{₹3Cr budget}; Spearheaded embezzlement prevention software saving \textbf{₹30L}.}
+    \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Curator, TEDxBITSGoa}}{July 2022 -- August 2023}
+    \resumeItemListStart
+      % \resumeItem{Led a cross-functional \textbf{team of 55} for India's oldest institutional TED conference; scaled attendance by \textbf{5x}, revenue by \textbf{4x}, and organic reach to \textbf{320K} through data-driven marketing campaigns.}
+      \resumeItem{Led cross-functional \textbf{team of 55} to scale attendance by 5x and revenue 4x via data-driven marketing reaching \textbf{320K} people.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}
