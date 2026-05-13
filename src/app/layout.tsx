@@ -5,7 +5,8 @@ import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/config/site";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -68,6 +69,8 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <SpeedInsights />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
