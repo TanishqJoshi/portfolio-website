@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 import { siteConfig } from "@/config/site";
 
 const navLinks = [
@@ -38,6 +39,21 @@ export function Header() {
     }
   }, [isMobileMenuOpen]);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // Only intercept if it's an anchor link on the same page
+    const href = e.currentTarget.href;
+    if (href.includes("#")) {
+      e.preventDefault();
+      const targetId = href.replace(/.*\#/, "");
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+        // Update URL without triggering a sudden jump
+        window.history.pushState(null, "", `#${targetId}`);
+      }
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/40">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
@@ -51,18 +67,23 @@ export function Header() {
             <Link
               key={link.name}
               href={link.href}
+              onClick={handleScroll}
               className="relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-cyan transition-all duration-300 ease-out group-hover:w-full rounded-full" />
             </Link>
           ))}
-          <Link
-            href="#contact"
-            className="text-sm font-semibold text-foreground bg-white/5 border border-white/10 px-4 py-2 rounded-full hover:bg-brand-cyan/20 hover:text-brand-cyan hover:border-brand-cyan/30 transition-all shadow-sm"
-          >
-            Contact
-          </Link>
+          <div className="flex items-center gap-4 ml-4">
+            <ThemeToggle />
+            <Link
+              href="#contact"
+              onClick={handleScroll}
+              className="text-sm font-semibold text-foreground bg-card border border-border px-4 py-2 rounded-full hover:border-brand-cyan/50 hover:text-brand-cyan transition-all shadow-sm"
+            >
+              Contact
+            </Link>
+          </div>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -95,7 +116,10 @@ export function Header() {
               >
                 <Link
                   href={link.href}
-                  onClick={toggleMobileMenu}
+                  onClick={(e) => {
+                    handleScroll(e);
+                    toggleMobileMenu();
+                  }}
                   className="text-3xl font-semibold tracking-tight text-foreground hover:text-brand-cyan transition-colors"
                 >
                   {link.name}

@@ -32,7 +32,7 @@ export function Footer() {
           <Link href="/" className="text-2xl font-bold tracking-tighter text-foreground hover:text-brand-cyan transition-colors">
             Tanishq Joshi<span className="text-brand-cyan"></span>
           </Link>
-          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-muted-foreground shadow-sm">
+          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card text-xs font-medium text-muted-foreground shadow-sm">
             <Code2 size={14} className="text-brand-purple" />
             <span>Built with Next.js & Tailwind v4</span>
           </div>

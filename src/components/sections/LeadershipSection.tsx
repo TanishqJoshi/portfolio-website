@@ -28,7 +28,7 @@ export function LeadershipSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:border-brand-purple/30 transition-colors shadow-lg"
+          className="glass p-8 rounded-3xl relative overflow-hidden group hover:border-brand-purple/30 transition-colors shadow-lg"
         >
           <div className="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
             <Mic size={120} />
@@ -56,7 +56,7 @@ export function LeadershipSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:border-brand-cyan/30 transition-colors shadow-lg"
+          className="glass p-8 rounded-3xl relative overflow-hidden group hover:border-brand-cyan/30 transition-colors shadow-lg"
         >
           <div className="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
             <ShieldCheck size={120} />

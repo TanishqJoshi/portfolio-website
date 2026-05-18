@@ -54,7 +54,7 @@ export function ExperienceSection() {
               {/* Individual Role Node on the timeline */}
               <div className="absolute left-[-4px] md:left-[28px] top-6 h-2.5 w-2.5 rounded-full bg-background border-[2px] border-brand-purple group-hover:bg-brand-purple transition-colors z-10" />
               
-              <div className="glass p-6 md:p-8 rounded-3xl border border-white/5 group-hover:border-white/10 transition-colors shadow-lg shadow-black/20">
+              <div className="glass p-6 md:p-8 rounded-3xl group-hover:border-foreground/20 transition-colors shadow-lg shadow-black/5">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-3">
                   <h4 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-brand-purple transition-colors">
                     {exp.role}
@@ -76,7 +76,7 @@ export function ExperienceSection() {
                 {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2">
                   {exp.techStack.map((tech) => (
-                    <span key={tech} className="text-xs font-semibold text-muted-foreground bg-white/5 border border-white/10 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors">
+                    <span key={tech} className="text-xs font-semibold text-muted-foreground bg-card border border-border px-3 py-1.5 rounded-full hover:bg-foreground/5 transition-colors">
                       {tech}
                     </span>
                   ))}

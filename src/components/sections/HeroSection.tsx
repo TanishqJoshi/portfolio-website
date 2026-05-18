@@ -42,7 +42,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-muted-foreground border-white/10 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-muted-foreground shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan"></span>
@@ -81,7 +81,15 @@ export function HeroSection() {
         >
           {/* Primary CTA */}
           <Link
-            href="#projects"
+            href="#experience"
+            onClick={(e) => {
+              e.preventDefault();
+              const elem = document.getElementById("experience");
+              if (elem) {
+                elem.scrollIntoView({ behavior: "smooth" });
+                window.history.pushState(null, "", "#experience");
+              }
+            }}
             className="group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-semibold text-white transition-all rounded-full bg-gradient-to-r from-brand-purple via-brand-blue to-brand-cyan shadow-lg shadow-brand-blue/20 hover:shadow-brand-blue/40 hover:-translate-y-0.5 w-full sm:w-auto"
           >
             View My Work
@@ -93,7 +101,7 @@ export function HeroSection() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-semibold text-foreground transition-all rounded-full glass hover:bg-white/10 dark:hover:bg-white/5 hover:border-brand-purple/50 shadow-sm hover:shadow-[0_0_20px_rgba(110,86,207,0.2)] hover:-translate-y-0.5 w-full sm:w-auto"
+            className="group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-semibold text-foreground transition-all rounded-full glass hover:bg-foreground/5 dark:hover:bg-white/5 hover:border-brand-purple/50 shadow-sm hover:shadow-[0_0_20px_rgba(110,86,207,0.2)] hover:-translate-y-0.5 w-full sm:w-auto"
           >
             Read Resume
             <FileText size={16} className="text-muted-foreground group-hover:text-foreground transition-colors" />

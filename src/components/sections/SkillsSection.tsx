@@ -40,7 +40,7 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="glass p-8 rounded-3xl border border-white/5 md:col-span-2 relative overflow-hidden group"
+          className="glass p-8 rounded-3xl md:col-span-2 relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
             <Server size={100} />
@@ -52,7 +52,7 @@ export function SkillsSection() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
               {backendSkills.map((skill) => (
-                <div key={skill.name} className="flex items-center justify-between py-2.5 border-b border-white/5 last:border-0 hover:bg-white/5 rounded-md px-2 -mx-2 transition-colors">
+                <div key={skill.name} className="flex items-center justify-between py-2.5 border-b border-border last:border-0 hover:bg-foreground/5 rounded-md px-2 -mx-2 transition-colors">
                   <span className="font-medium text-foreground/90">{skill.name}</span>
                   <div className="flex items-center gap-2.5">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider hidden sm:block">{skill.level}</span>
@@ -70,7 +70,7 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="glass p-8 rounded-3xl border border-white/5 md:col-span-1 relative overflow-hidden group"
+          className="glass p-8 rounded-3xl md:col-span-1 relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
             <Compass size={100} />
@@ -81,15 +81,15 @@ export function SkillsSection() {
               <h3 className="text-xl font-bold text-foreground">Beyond the IDE</h3>
             </div>
             <div className="flex flex-col gap-3 mt-auto">
-              <div className="flex items-center gap-4 py-3 border-b border-white/5 last:border-0">
+              <div className="flex items-center gap-4 py-3 border-b border-border last:border-0">
                 <ChartBar size={18} className="text-brand-cyan shrink-0" />
                 <span className="font-medium text-sm">Equity Research</span>
               </div>
-              <div className="flex items-center gap-4 py-3 border-b border-white/5 last:border-0">
+              <div className="flex items-center gap-4 py-3 border-b border-border last:border-0">
                 <TrendingUp size={18} className="text-brand-blue shrink-0" />
                 <span className="font-medium text-sm">Value Investing</span>
               </div>
-              <div className="flex items-center gap-4 py-3 border-b border-white/5 last:border-0">
+              <div className="flex items-center gap-4 py-3 border-b border-border last:border-0">
                 <Trophy size={18} className="text-brand-purple shrink-0" />
                 <span className="font-medium text-sm">Cricket</span>
               </div>
@@ -103,7 +103,7 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="glass p-8 rounded-3xl border border-white/5 md:col-span-1 lg:col-span-2 relative overflow-hidden group"
+          className="glass p-8 rounded-3xl md:col-span-1 lg:col-span-2 relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
             <BrainCircuit size={100} />
@@ -115,7 +115,7 @@ export function SkillsSection() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
               {aiSkills.map((skill) => (
-                <div key={skill.name} className="flex items-center justify-between py-2.5 border-b border-white/5 last:border-0 hover:bg-white/5 rounded-md px-2 -mx-2 transition-colors">
+                <div key={skill.name} className="flex items-center justify-between py-2.5 border-b border-border last:border-0 hover:bg-foreground/5 rounded-md px-2 -mx-2 transition-colors">
                   <span className="font-medium text-foreground/90">{skill.name}</span>
                   <div className="flex items-center gap-2.5">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider hidden sm:block">{skill.level}</span>
@@ -133,7 +133,7 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="glass p-8 rounded-3xl border border-white/5 md:col-span-2 lg:col-span-1 relative overflow-hidden group"
+          className="glass p-8 rounded-3xl md:col-span-2 lg:col-span-1 relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
             <Sigma size={100} />
@@ -145,7 +145,7 @@ export function SkillsSection() {
             </div>
             <div className="flex flex-col gap-1 mt-auto">
               {mathSkills.map((skill) => (
-                <div key={skill.name} className="flex items-center justify-between py-2.5 border-b border-white/5 last:border-0 hover:bg-white/5 rounded-md px-2 -mx-2 transition-colors">
+                <div key={skill.name} className="flex items-center justify-between py-2.5 border-b border-border last:border-0 hover:bg-foreground/5 rounded-md px-2 -mx-2 transition-colors">
                   <span className="font-medium text-foreground/90 text-sm">{skill.name}</span>
                   <div className={`h-2 w-2 rounded-full ${getLevelColor(skill.level)}`} title={skill.level} />
                 </div>
@@ -183,7 +183,7 @@ export function SkillsSection() {
             {[...tools, ...tools].map((tool, i) => (
               <div
                 key={i}
-                className="glass px-5 py-2 rounded-full border border-white/5 text-muted-foreground text-sm font-medium tracking-wide hover:text-brand-cyan hover:border-brand-cyan/30 transition-colors cursor-default"
+                className="glass px-5 py-2 rounded-full text-muted-foreground text-sm font-medium tracking-wide hover:text-brand-cyan hover:border-brand-cyan/30 transition-colors cursor-default"
               >
                 {tool}
               </div>

@@ -80,7 +80,7 @@ export function ProjectsSection() {
                 {/* Tech Stack Pills */}
                 <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t border-border/40">
                   {project.techStack.map((tech) => (
-                    <span key={tech} className="text-xs font-semibold text-muted-foreground bg-white/5 border border-white/10 px-3 py-1.5 rounded-md">
+                    <span key={tech} className="text-xs font-semibold text-muted-foreground bg-card border border-border px-3 py-1.5 rounded-md">
                       {tech}
                     </span>
                   ))}
